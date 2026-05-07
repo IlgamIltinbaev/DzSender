@@ -4,11 +4,8 @@ namespace DzSender.Classes
 {
     public class NotificationSender
     {
-        // Поля могут быть private (это правильно для инкапсуляции)
         private readonly INotificationService _service;
         private readonly ILogger _logger;
-
-        // 2️⃣ Конструктор ОБЯЗАТЕЛЬНО public
         public NotificationSender(INotificationService service, ILogger logger)
         {
             _service = service;
@@ -25,7 +22,7 @@ namespace DzSender.Classes
             catch (Exception ex)
             {
                 _logger.LogError($"Ошибка отправки через {_service.Name}: {ex.Message}");
-                throw; // Пробрасываем дальше, чтобы форма показала MessageBox
+                throw;
             }
         }
     }

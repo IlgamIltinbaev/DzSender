@@ -15,8 +15,6 @@ namespace DzSender.Classes
         public void Send(string message)
         {
             _logger.LogInfo($"Отправка Email: {message}");
-            // Имитация задержки
-            System.Threading.Thread.Sleep(1000);
         }
     }
 }

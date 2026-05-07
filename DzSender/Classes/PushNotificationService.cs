@@ -15,7 +15,7 @@ namespace DzSender.Classes
 
         public void Send(string message)
         {
-            // Имитируем ошибку с вероятностью 30%
+            //Ошибка с шансом в 30%
             if (_random.Next(0, 10) < 3)
             {
                 throw new Exception("Случайный сбой сервера Push-уведомлений!");
